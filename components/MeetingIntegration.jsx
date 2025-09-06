@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 export default function MeetingIntegration() {
   const [meetings, setMeetings] = useState([]);
   const [calendarConnected, setCalendarConnected] = useState(false);
-  const [activeBots, setActiveBots] = useState<string[]>([]);
+  const [activeBots, setActiveBots] = useState([]);
   const [showAddMeeting, setShowAddMeeting] = useState(false);
   const [newMeeting, setNewMeeting] = useState({
     url: '',
@@ -21,7 +21,7 @@ export default function MeetingIntegration() {
       try {
         const response = await fetch('http://localhost:5001/api/active-meetings');
         const data = await response.json();
-        setActiveBots(data.map((m: any) => m.id));
+        setActiveBots(data.map((m) => m.id));
       } catch (error) {
         console.error('Error fetching active bots:', error);
       }

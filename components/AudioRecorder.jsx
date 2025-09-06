@@ -34,7 +34,7 @@ const AudioRecorder = () => {
       console.log('Disconnected from audio service');
     });
 
-    socketRef.current.on('transcription', (transcription: Transcription) => {
+    socketRef.current.on('transcription', (transcription) => {
       setTranscriptions(prev => [...prev, transcription]);
     });
 
@@ -156,7 +156,7 @@ const AudioRecorder = () => {
     }
   }, [sessionId, transcriptions, noteType]);
 
-  const formatTranscript = (transcriptions: Transcription[]) => {
+  const formatTranscript = (transcriptions) => {
     return transcriptions
       .map(t => `[${new Date(t.timestamp).toLocaleTimeString()}] ${t.transcript}`)
       .join('\n');
