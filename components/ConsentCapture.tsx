@@ -98,7 +98,7 @@ export default function ConsentCapture({ onConsentComplete, clientInfo }: Consen
   };
 
   const steps = Object.entries(consentTexts)
-    .filter(([_, config]) => config.show !== false)
+    .filter(([_, config]) => (config as any).show !== false)
     .map(([key]) => key);
 
   const currentConsentKey = steps[currentStep - 1] as keyof ConsentForm;

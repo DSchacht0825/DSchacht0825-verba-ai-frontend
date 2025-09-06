@@ -43,15 +43,8 @@ export async function POST(request: NextRequest) {
         currency: 'USD'
       },
       customerId,
-      note: `Verba AI - ${planName} Plan (50% Early Bird Discount)`,
-      referenceId: `early-bird-${Date.now()}`,
-      metadata: {
-        plan: planName,
-        earlyBird: 'true',
-        discountPercent: '50',
-        originalAmount: originalAmount.toString(),
-        discountedAmount: amount.toString()
-      }
+      note: `Verba AI - ${planName} Plan (50% Early Bird Discount) - Original: $${originalAmount} Discounted: $${amount}`,
+      referenceId: `early-bird-${planName.toLowerCase()}-${Date.now()}`
     });
 
     // Create subscription (for recurring billing)
