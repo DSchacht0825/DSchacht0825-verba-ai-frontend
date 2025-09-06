@@ -132,8 +132,8 @@ export default function LandingPage() {
               onClick={() => setPaymentModal({
                 isOpen: true,
                 planName: 'Professional',
-                amount: 99,
-                originalAmount: 199
+                amount: 40,
+                originalAmount: 80
               })}
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-12 py-5 rounded-full text-lg font-bold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25 transform hover:-translate-y-1">
               Claim 50% Discount Now
@@ -146,7 +146,7 @@ export default function LandingPage() {
           </div>
           
           <p className="mt-8 text-blue-200 text-lg">
-            Full service launches October 2024 • No credit card required
+            Full service launches October 2024
           </p>
         </div>
 
@@ -610,8 +610,8 @@ export default function LandingPage() {
               onClick={() => setPaymentModal({
                 isOpen: true,
                 planName: 'Professional',
-                amount: 99,
-                originalAmount: 199
+                amount: 40,
+                originalAmount: 80
               })}
               className="bg-white text-blue-600 px-12 py-5 rounded-full text-lg font-bold hover:bg-blue-50 transition-all duration-300 shadow-2xl hover:shadow-white/25 transform hover:-translate-y-1">
               Claim Your 50% Discount
@@ -621,7 +621,7 @@ export default function LandingPage() {
             </button>
           </div>
           <p className="mt-8 text-blue-200 text-lg">
-            No credit card required • 30-day free trial • Cancel anytime
+            30-day money-back guarantee • Cancel anytime
           </p>
         </div>
       </BackgroundSection>
